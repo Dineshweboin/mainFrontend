@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:1337/api';
+const API_BASE_URL = 'https://committed-thrill-2c4d517edc.strapiapp.com/api';
 
 export const fetchHeroSections = async () => {
   try {

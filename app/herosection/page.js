@@ -5,6 +5,8 @@ export async function generateStaticParams() {
   try {
     const heroSectionsData = await fetchHeroSections();
     const heroSection = heroSectionsData.data[0];
+    console.log(heroSection);
+    
     
     // Return only necessary fields for pre-rendering
     return { 
