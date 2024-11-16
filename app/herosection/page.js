@@ -5,8 +5,6 @@ export async function generateStaticParams() {
   try {
     const heroSectionsData = await fetchHeroSections();
     const heroSection = heroSectionsData.data[0];
-    console.log(heroSection);
-    
     
     // Return only necessary fields for pre-rendering
     return { 
@@ -42,7 +40,7 @@ export default async function HeroSectionPage() {
       <div className="absolute top-0 left-0 h-screen overflow-y-hidden overflow-x-hidden">
         {images.leftBg && (
           <Image
-            src={`http://localhost:1337${images.leftBg}`}
+            src={`${images.leftBg}`}
             alt="left background"
             layout="fill"
             objectFit="cover"
@@ -55,7 +53,7 @@ export default async function HeroSectionPage() {
       <div className="absolute top-0 right-0 h-screen overflow-y-hidden overflow-x-hidden">
         {images.rightBg && (
           <Image
-            src={`http://localhost:1337${images.rightBg}`}
+            src={`${images.rightBg}`}
             alt="right background"
             layout="fill"
             objectFit="cover"
@@ -89,7 +87,7 @@ export default async function HeroSectionPage() {
           {/* Card 1 */}
           {images.card1 && (
             <Image
-              src={`http://localhost:1337${images.card1}`}
+              src={`${images.card1}`}
               alt="card1"
               width={288} // adjust width and height based on your layout
               height={288}
@@ -102,7 +100,7 @@ export default async function HeroSectionPage() {
             <div className="relative overflow-hidden hover:bottom-3 rounded-3xl hover:shadow-lg duration-300">
               {images.card2Main && (
                 <Image
-                  src={`http://localhost:1337${images.card2Main}`}
+                  src={`${images.card2Main}`}
                   alt="card2"
                   width={288}
                   height={288}
@@ -111,7 +109,7 @@ export default async function HeroSectionPage() {
               )}
               {images.card2Outline && (
                 <Image
-                  src={`http://localhost:1337${images.card2Outline}`}
+                  src={`${images.card2Outline}`}
                   alt="outline"
                   width={288}
                   height={288}
@@ -124,7 +122,7 @@ export default async function HeroSectionPage() {
           {/* Card 3 */}
           {images.card3 && (
             <Image
-              src={`http://localhost:1337${images.card3}`}
+              src={`${images.card3}`}
               alt="card3"
               width={288}
               height={288}
